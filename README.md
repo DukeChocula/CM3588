@@ -2,10 +2,9 @@
 # FriendlyElec CM3588
 <img src="https://wiki.friendlyelec.com/wiki/images/c/cc/CM3588SDK-A01.jpg" width="400">
 
+The [FriendlyElec (NanoPC) CM3588](https://www.friendlyelec.com/index.php?route=product/product&product_id=294) is a RK3588 based solution with 4/8/16GB LPDDR4x memory and 0/64GB eMMC flash storage. The inital carrier board released with the CM3588 features 4x M.2 NVMe SSD slots (PCIe 3.0 x1 each) and a 2.5gbps RJ45 port, making it an attractive option for a low powered silent NAS at $130/$145/$174 depending on which RAM configuration you purchase. 
 
 I ordered this in response to the [LTT video](https://www.youtube.com/watch?v=QsM6b5yix0U). I have seen a few people struggling to configure these, and figured I would offer some basic guides in order to get those who need some assistance on getting their NAS up and going.
-
-The [FriendlyElec (NanoPC) CM3588](https://www.friendlyelec.com/index.php?route=product/product&product_id=294) is a RK3588 based solution with 4/8/16GB LPDDR4x memory and 0/64GB eMMC flash storage. The inital carrier board released with the CM3588 features 4x M.2 NVMe SSD slots (PCIe 3.0 x1 each) and a 2.5gbps RJ45 port, making it an attractive option for a low powered silent NAS at $130/$145/$174 depending on which RAM configuration you purchase. 
 
 I will be using the precompiled Debian 12 installer found [Here](https://drive.google.com/drive/folders/1pRbY9IMKlwChIOfoE6I9tT6dZd5T8p2E)
 
