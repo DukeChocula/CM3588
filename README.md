@@ -7,7 +7,7 @@ I ordered this in response to the [LTT video](https://www.youtube.com/watch?v=Qs
 
 The [FriendlyElec (NanoPC) CM3588](https://www.friendlyelec.com/index.php?route=product/product&product_id=294) is a RK3588 based solution with 4/8/16GB LPDDR4x memory and 0/64GB eMMC flash storage. The inital carrier board released with the CM3588 features 4x M.2 NVMe SSD slots (PCIe 3.0 x1 each) and a 2.5gbps RJ45 port, making it an attractive option for a low powered silent NAS at $130/$145/$174 depending on which RAM configuration you purchase. 
 
-I will be using the precompiled Debian 12 installer founder [Here](https://drive.google.com/drive/folders/1pRbY9IMKlwChIOfoE6I9tT6dZd5T8p2E)
+I will be using the precompiled Debian 12 installer found [Here](https://drive.google.com/drive/folders/1pRbY9IMKlwChIOfoE6I9tT6dZd5T8p2E)
 
 The [FriendlyElec Wiki](https://wiki.friendlyelec.com/wiki/index.php/CM3588) is actually pretty good, but it can feel like a wall of text/commands to run and can be overwhelming to a new user.
 
@@ -152,9 +152,9 @@ zpool status
 ```
 
 If this works, it will report that we have 0 pools. 
-If you get an error that says: "The ZFS modules are not loaded. Try running '/sbin/modprobe zfs' as root to load them", that means DKMS isn't working properly.
+If you get an error that says: "The ZFS modules are not loaded. Try running '/sbin/modprobe zfs' as root to load them", that means DKMS isn't working properly and you likely missed a step up above or it failed to compile, which should have given you an error.
 
-Now that we have ZFS working, we can create out ZFS pool. You have a few options, depending on how much redundancy or performance you want. I would recommend the following options, although there are a few more. You will have to check the [ZFS documenation](https://openzfs.github.io/openzfs-docs/) for any other array types.
+Now that we have ZFS working, we can create our ZFS pool. You have a few options, depending on how much redundancy or performance you want. I would recommend the following options, although there are a few more. You will have to check the [ZFS documenation](https://openzfs.github.io/openzfs-docs/) for any other array types.
 
 RAIDZ1 (RAID 5)
 ```bash
@@ -188,9 +188,9 @@ config:
 errors: No known data errors
 ```
 
-The array will be mounted at /POOLNAME
+The array will be mounted at /mypool (or whatever you named your pool)
 
-Since this is all SSD array, I recommend enabling autotrim. Trim marks the invalid data and tells the SSD to ignore it during the garbage collection process.
+Since this is all SSD array, I recommend enabling autotrim. Trim marks the invalid data and tells the SSD to ignore it during the garbage collection process, allowing your SSD to do some cleanup on its end.
 
 ```bash
 zpool set autotrim=on mypool
