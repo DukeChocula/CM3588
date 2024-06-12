@@ -126,7 +126,7 @@ cd sd-fuse_rk3588
 git clone https://github.com/friendlyarm/kernel-rockchip --depth 1 -b nanopi6-v6.1.y kernel-rk3588
 ```
 
-Download the source code for the kernel [here](https://drive.google.com/drive/folders/1WFnZzNtQJLMDKYKh8rxIO4YuNrDur2qM) (debian-bookworm-core-arm64-images.tgz), then use a tool like WinSCP to copy this to the sd-fuse-rk3588 folder. While you _technically_ can skip this step (the script will download the source code for you), it comes from a server in China where you have to download ~550MB @ 200kbps
+Download the source code for the kernel [here](https://drive.google.com/drive/folders/1egG5809y3nE4xscUgBl7SVREIOlSuFbo) (debian-bookworm-core-arm64-images.tgz), then use a tool like WinSCP to copy this to the sd-fuse-rk3588 folder. While you _technically_ can skip this step (the script will download the source code for you), it comes from a server in China where you have to download ~550MB @ 200kbps
 
 Compiling the linux headers will take awhile (~50 minutes)
 ```bash
