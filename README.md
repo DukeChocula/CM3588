@@ -187,7 +187,11 @@ config:
 errors: No known data errors
 ```
 
-The array will be mounted at /mypool (or whatever you named your pool)
+The array will be mounted at /mypool (or whatever you named your pool). You can move the mountpoint to a different location:
+
+```bash
+zfs set mountpoint=/mnt/storage mypool
+```
 
 Since this is all SSD array, I recommend enabling autotrim. Trim marks the invalid data and tells the SSD to ignore it during the garbage collection process, allowing your SSD to do some cleanup on its end.
 
