@@ -117,30 +117,20 @@ deb-src http://deb.debian.org/debian bookworm-backports main non-free-firmware
 ```
 
 ### Compiling linux-headers for DKMS (Dynamic Kernel Module Support)
-In order to install ZFS, we need to compile linux headers for our kernel to add DKMS support.
+In order to install ZFS, we first need to install linux headers for our kernel to add DKMS support.
+
+Luckily, pre-compiled headers can already be found in /opt/archives
 
 ```bash
 sudo -i
-git clone https://github.com/friendlyarm/sd-fuse_rk3588.git --single-branch -b kernel-6.1.y
-cd sd-fuse_rk3588
-git clone https://github.com/friendlyarm/kernel-rockchip --depth 1 -b nanopi6-v6.1.y kernel-rk3588
-```
-
-Download the source code for the kernel [here](https://drive.google.com/drive/folders/1egG5809y3nE4xscUgBl7SVREIOlSuFbo) (debian-bookworm-core-arm64-images.tgz), then use a tool like WinSCP to copy this to the sd-fuse-rk3588 folder. While you _technically_ can skip this step (the script will download the source code for you), it comes from a server in China where you have to download ~550MB @ 200kbps
-
-Compiling the linux headers will take awhile (~50 minutes)
-```bash
-tar xvzf debian-bookworm-core-arm64-images.tgz
-MK_HEADERS_DEB=1 BUILD_THIRD_PARTY_DRIVER=0 KERNEL_SRC=$PWD/kernel-rk3588 ./build-kernel.sh debian-bookworm-core-arm64
-cd out/
-dpkg -i linux-headers-6.1.57.deb
-exit
+dpkg -i /opt/archives/linux-headers-6.1.57_6.1.57-11_arm64.deb
 ```
 
 #### Installing ZFS
 Now that we have Linux headers, we can use apt to install ZFS
 
 ```bash
+sudo apt install zfs-dkms
 sudo apt install zfsutils-linux
 ```
 
