@@ -6,7 +6,7 @@ The [FriendlyElec (NanoPC) CM3588](https://www.friendlyelec.com/index.php?route=
 
 I ordered this in response to the [LTT video](https://www.youtube.com/watch?v=QsM6b5yix0U). I have seen a few people struggling to configure these, and figured I would offer some basic guides in order to get those who need some assistance on getting their NAS up and going.
 
-I will be using the precompiled Debian 12 installer found [Here](https://drive.google.com/drive/folders/1pRbY9IMKlwChIOfoE6I9tT6dZd5T8p2E)
+I will be using the precompiled Debian 12 installer found [here.](https://drive.google.com/drive/folders/1FoBbP_nPkMehwBj4wHwsbRU-QGjEdeEP) ( 01_Official images > 02_SD-to-eMMC images > rk3588-eflasher-debian-bookworm-core-6.1-arm64-xxxxxxxx.img.gz)
 
 The [FriendlyElec Wiki](https://wiki.friendlyelec.com/wiki/index.php/CM3588) is actually pretty good, but it can feel like a wall of text/commands to run and can be overwhelming to a new user.
 
@@ -24,7 +24,7 @@ I remixed [sgofferj's CM3588-NAS-case](https://github.com/sgofferj/CM3588-NAS-ca
 ## Installing an OS
 Since I bought a 8GB RAM/64GB eMMC model, I will be using an SD to eMMC install image for this guide. You will need a MicroSD card that is 8GB or larger.
 
-1) Download Debian 12 Bookworm Core from [here.](https://drive.google.com/drive/folders/1pRbY9IMKlwChIOfoE6I9tT6dZd5T8p2E) (rk3588-eflasher-debian-bookworm-core-6.1-arm64-20240511.img.gz)
+1) Download Debian 12 Bookworm Core from [here.](https://drive.google.com/drive/folders/1FoBbP_nPkMehwBj4wHwsbRU-QGjEdeEP) ( 01_Official images > 02_SD-to-eMMC images > rk3588-eflasher-debian-bookworm-core-6.1-arm64-xxxxxxxx.img.gz)
 2) Use a tool like [7Zip](https://www.7-zip.org/), to extract the .img file
 3) Use [Balena Etcher](https://etcher.balena.io/) to write the image to the SD card.
 4) Install the SD card into the CM3588 NAS, then power the unit on.
