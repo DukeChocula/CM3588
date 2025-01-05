@@ -103,17 +103,17 @@ nano /etc/apt/sources.list
 #deb https://mirrors.aliyun.com/debian bookworm-backports main non-free contrib
 #deb-src https://mirrors.aliyun.com/debian bookworm-backports main non-free contrib
 
-deb http://deb.debian.org/debian bookworm main non-free-firmware
-deb-src http://deb.debian.org/debian bookworm main non-free-firmware
+deb http://deb.debian.org/debian bookworm main non-free-firmware contrib
+deb-src http://deb.debian.org/debian bookworm main non-free-firmware contrib
 
-deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
-deb-src http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware contrib
+deb-src http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware contrib
 
-deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
-deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmware
+deb http://deb.debian.org/debian bookworm-updates main non-free-firmware contrib
+deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmware contrib
 
-deb http://deb.debian.org/debian bookworm-backports main non-free-firmware
-deb-src http://deb.debian.org/debian bookworm-backports main non-free-firmware
+deb http://deb.debian.org/debian bookworm-backports main non-free-firmware contrib
+deb-src http://deb.debian.org/debian bookworm-backports main non-free-firmware contrib
 ```
 
 ### Compiling linux-headers for DKMS (Dynamic Kernel Module Support)
