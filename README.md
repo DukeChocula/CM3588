@@ -66,7 +66,7 @@ deluser pi
 ### Create a new user 
 I am using nas in this example, but feel free to name it whatever you want, then we will add it to sudoers group
 ```bash
-useradd nas
+useradd -m nas
 ```
 ```bash
 passwd nas
@@ -79,7 +79,7 @@ usermod -aG sudo nas
 This is for security, as the username is always root and the access rights are unlimited.
 
 ```bash
-nano /etc/ssh/sshd_config
+sudo nano /etc/ssh/sshd_config
 ```
 Go to line 33, change `PermitRootLogin yes` to `PermitRootLogin no`.
 ```bash
@@ -130,8 +130,7 @@ dpkg -i /opt/archives/linux-headers-6.1.57_6.1.57-11_arm64.deb
 Now that we have Linux headers, we can use apt to install ZFS
 
 ```bash
-sudo apt install zfs-dkms
-sudo apt install zfsutils-linux
+sudo apt install zfs-dkms zfsutils-linux
 ```
 
 Now that ZFS is installed, we will try to run a command to test that ZFS and DKMS are actually functional.
