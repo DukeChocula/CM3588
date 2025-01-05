@@ -25,12 +25,11 @@ I remixed [sgofferj's CM3588-NAS-case](https://github.com/sgofferj/CM3588-NAS-ca
 Since I bought a 8GB RAM/64GB eMMC model, I will be using an SD to eMMC install image for this guide. You will need a MicroSD card that is 8GB or larger.
 
 1) Download Debian 12 Bookworm Core from [here.](https://drive.google.com/drive/folders/1FoBbP_nPkMehwBj4wHwsbRU-QGjEdeEP) ( 01_Official images > 02_SD-to-eMMC images > rk3588-eflasher-debian-bookworm-core-6.1-arm64-xxxxxxxx.img.gz)
-2) Use a tool like [7Zip](https://www.7-zip.org/), to extract the .img file
-3) Use [Balena Etcher](https://etcher.balena.io/) to write the image to the SD card.
-4) Install the SD card into the CM3588 NAS, then power the unit on.
-5) If you use one of the HDMI out ports, you can track the progress. Otherwise you can wait ~5 minutes (mine consistently takes around 80 seconds to install).
-6) Power down the unit, then power it back on.
-7) If you have HDMI hooked up, you should be prompted at the main login screen. If you want to use SSH, scan your network or check your router/DHCP server for the device's IP address.
+2) Use [Balena Etcher](https://etcher.balena.io/) to write the image to the SD card.
+3) Install the SD card into the CM3588 NAS, then power the unit on.
+4) If you use one of the HDMI out ports, you can track the progress. Otherwise you can wait ~5 minutes (mine consistently takes around 80 seconds to install).
+5) Power down the unit, then power it back on.
+6) If you have HDMI hooked up, you should be prompted at the main login screen. If you want to use SSH, scan your network or check your router/DHCP server for the device's IP address.
 
 ## Configuring Debian 12
 There are 2 accounts by default.
